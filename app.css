@@ -1,0 +1,14 @@
+body{ 
+    text-align: center;
+}
+
+button {
+    background-color: aquamarine;
+    border: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+}
