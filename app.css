@@ -12,3 +12,14 @@ button {
 button:hover{
     cursor: pointer;
 }
+
+#mood {
+    padding: 4%;
+    border: 1px solid black;
+    margin: 10%;
+    box-shadow: 5px 10px;
+}
+
+#mood-adder {
+    
+}

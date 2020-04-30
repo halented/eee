@@ -1,2 +1,2 @@
-# mood-maker
+# Mood™ Maker
 For Olivia

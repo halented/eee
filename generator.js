@@ -7,6 +7,7 @@ let feelings = `Fulfilled
     Trusting
     Calm
     Centered
+    completely in love
     Content
     Amazed
     Awe
@@ -145,7 +146,7 @@ Hesitant
 Inhibited
 Perplexed
 Questioning
-Rejecting
+Rejected
 Reluctant
 Shocked
 Skeptical
@@ -157,31 +158,24 @@ Worn out
 Sweaty
 Tender
 Tense
-Throbbing
-Tight
+Tired
 Tingling
 Trembly
 Twitchy
 Vibrating
 Warm
-Wobbly
 Wooden
 Shaky
 Shivery
 Slow
-Smooth
 Soft
 Sore
 Spacey
-Spacious
-Sparkly
-Stiff
 Still
 Suffocated
 Numb
 Pain
 Pounding
-Prickly
 Pulsing
 Queasy
 Radiating
@@ -242,8 +236,7 @@ deep clear blue
 bitterly cold
 blustery
 drizzling
-pouring rain
-`
+pouring rain`
 weather = weather.split("\n").map(x=> x.toLowerCase())
 
 let locations = `Airplane
@@ -252,12 +245,12 @@ Alley
 Amusement Park
 Attic
 Bakery
-Bank
+river Bank
 Basement
 Bathroom (home)
 Barn
 Beach
-Bedrooms
+Your bedroom
 Birthday Party
 Bonfire
 Bowling Alley
@@ -274,17 +267,22 @@ Coffee House
 Desert
 Diner
 Elevator
-Farms
+Farm
+empty street
 Forest
+your car
 Garage
+family party
+cracker barrel
 Garage Sale
 Garden
 Graveyard
 Grocery Store
-Haunted House
+Someone else's house
 Plant Shop
 High School Hallway
 Hospital
+south bend, indiana. again.
 Hotel Room
 House Party
 Kitchen
@@ -297,13 +295,14 @@ Middle School Dance (informal)
 Mountains
 Movie Theatre
 Night Club
-Sea Bed
+Oceanside
 Old Pick-Up Truck
 Pond
 Pub
 Public Pool (Outdoor)
 Rainforest/Jungle
-Ranch (Commune)
+Ranch
+Queer Commune
 Restaurant
 River
 Shopping Mall
@@ -314,7 +313,7 @@ backyard shed
 Treehouse
 Tropical Island City
 Urban Street
-Video Arcade
+Arcade
 Waiting Room
 Waterfall
 Woods at Night
@@ -325,7 +324,8 @@ locations = locations.split("\n").map(x=> x.toLowerCase())
 const button = document.querySelector('button')
 button.addEventListener('click', prompt)
 
-const body = document.querySelector('body')
+const moodHolder = document.getElementById('mood-holder')
+let moodCounter = 0
 
 function prompt(){
     let message = 'THE FEELING: \n'
@@ -334,6 +334,7 @@ function prompt(){
     message += `     => ${randomizer(weather)}\n`
     message += ' THE LOCATION: \n'
     message += `     => ${randomizer(locations)}\n`
+    
     message += ''
     appendMessage(message)
 }
@@ -344,7 +345,10 @@ function randomizer(arr){
 }
 
 function appendMessage(mes){
+    moodCounter += 1
+    mes = `${moodCounter}. \n${mes}`
     const divvy = document.createElement('div')
+    divvy.id = 'mood'
     divvy.innerText = mes
-    body.appendChild(divvy)
+    moodHolder.appendChild(divvy)
 }
