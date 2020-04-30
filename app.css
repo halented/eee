@@ -1,16 +1,24 @@
 body{ 
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
 }
 
-button {
+#generator {
     background-color: aquamarine;
-    border: black;
+    border: 2px solid rgb(74, 142, 131);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 10px;
 }
 
-button:hover{
+#generator:hover{
     cursor: pointer;
+    background-color: rgb(4, 249, 167);
+    border: 2px solid rgb(42, 97, 88);
 }
 
 #mood {
@@ -20,6 +28,11 @@ button:hover{
     box-shadow: 5px 10px;
 }
 
-#mood-adder {
-    
+/* workaround to force the mood-adder div to the bottom by giving it a flex -1*/
+#empty {
+    flex: 1 1 0%;
+}
+
+#mood-adder:hover {
+    cursor: pointer;
 }

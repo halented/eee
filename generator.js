@@ -321,20 +321,19 @@ Zoo`
 locations = locations.split("\n").map(x=> x.toLowerCase())
 
 
-const button = document.querySelector('button')
-button.addEventListener('click', prompt)
+const generator = document.querySelector('button')
+generator.addEventListener('click', prompt)
 
 const moodHolder = document.getElementById('mood-holder')
 let moodCounter = 0
 
 function prompt(){
     let message = 'THE FEELING: \n'
-    message += `     => ${randomizer(feelings)}\n` 
+    message += `     ${randomizer(feelings)}\n` 
     message += ' THE WEATHER: \n'
-    message += `     => ${randomizer(weather)}\n`
+    message += `     ${randomizer(weather)}\n`
     message += ' THE LOCATION: \n'
-    message += `     => ${randomizer(locations)}\n`
-    
+    message += `     ${randomizer(locations)}\n`
     message += ''
     appendMessage(message)
 }
