@@ -28,7 +28,7 @@ body{
     box-shadow: 5px 10px;
 }
 
-/* workaround to force the mood-adder div to the bottom by giving it a flex -1*/
+/* workaround to force the mood-adder div to the bottom of the page -- this empty div has a flex grow of one, flex shrink of one, and basis of 0%*/
 #empty {
     flex: 1 1 0%;
 }
