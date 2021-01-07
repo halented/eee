@@ -322,7 +322,8 @@ locations = locations.split("\n").map(x=> x.toLowerCase())
 
 
 const generator = document.querySelector('button')
-generator.addEventListener('click', prompt)
+generator.addEventListener('click', pickle)
+// prompt
 
 const moodHolder = document.getElementById('mood-holder')
 let moodCounter = 0
@@ -350,4 +351,13 @@ function appendMessage(mes){
     divvy.id = 'mood'
     divvy.innerText = mes
     moodHolder.appendChild(divvy)
+}
+ 
+
+export default function eggs(){
+    console.log("eggs")
+}
+
+const pickle = () => {
+   localStorage.setItem(user, {me: "self"})
 }

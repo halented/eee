@@ -1,0 +1,13 @@
+{
+  "name": "moodMaker",
+  "version": "1.1.0",
+  "description": "for olivia",
+  "main": "index.html",
+  "repository": "git@github.com:halented/mood-maker.git",
+  "author": "hbj <heyhal19@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "require": "^2.4.20"
+  }
+}
